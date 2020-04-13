@@ -1,0 +1,22 @@
+<div class="global-ctn">
+  <div>
+    <app-consulta (ConsultaClima)="showUnClima ($event)"></app-consulta>
+    <br />
+    <app-modal
+      [id]="id"
+      [pais]="pais"
+      [ciudad]="ciudad"
+      [grados]="grados"
+      (AlmacenaClima)="modalClimaSave($event)"
+    >
+    </app-modal>
+    <app-modal2></app-modal2>
+  </div>
+  <div class="col-6">
+    <app-climas
+      [climas]="climas"
+      (EditClima)="editClimaEvento($event)"
+      (borraTarjetaClima)="deleteClimaTarjeta($event)"
+    ></app-climas>
+  </div>
+</div>
